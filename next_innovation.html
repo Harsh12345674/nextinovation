@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEXT INNOVATION</title>
+<style>
+  body {
+    background-color: #001f3f;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  nav button {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  nav button:hover {
+    background-color: black;
+  }
+  nav button.language {
+    background-color: green;
+    padding: 6px 15px;
+    font-size: 0.85em;
+  }
+  nav button.language:hover {
+    background-color: darkgreen;
+  }
+  section {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+  }
+  section.active {
+    display: block;
+  }
+  .home-images img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .home-subsection {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  .home-subsection h3 {
+    margin-top: 0;
+  }
+  .home-subsection ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .home-subsection ul li {
+    margin: 6px 0;
+  }
+  .home-subsection ul li a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .home-subsection ul li a:hover {
+    text-decoration: underline;
+  }
+  form.upload-form {
+    margin-top: 15px;
+  }
+  form.upload-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  form.upload-form input[type="file"] {
+    padding: 5px;
+  }
+  form.upload-form button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  form.upload-form button:hover {
+    background-color: black;
+  }
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #001f3f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  #language-select {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #001f3f;
+    border-radius: 5px;
+    display: none;
+    padding: 8px 12px;
+    z-index: 1000;
+    font-size: 0.9em;
+  }
+  #language-select button {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    margin: 2px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  #language-select button:hover {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1 id="title">NEXT INNOVATION</h1>
+    <p id="subtitle">Empowering Future with Imagination & Technology</p>
+  </header>
+  <nav>
+    <button onclick="showSection('home')"><span id="btnHome">HOME</span></button>
+    <button onclick="showSection('innovation')"><span id="btnInnovation">INNOVATION</span></button>
+    <button onclick="showSection('about')"><span id="btnAbout">ABOUT</span></button>
+    <button onclick="showSection('helpdesk')"><span id="btnHelpdesk">HELP DESK</span></button>
+    <button class="language" onclick="toggleLanguageSelect()">LANGUAGE</button>
+  </nav>
+
+  <div id="language-select">
+    <button onclick="changeLanguage('hi')">[translate:Hindi]</button>
+    <button onclick="changeLanguage('ko')">[translate:Korean]</button>
+  </div>
+
+  <section id="home" class="active">
+    <h2 id="homeTitle">Welcome to NEXT INNOVATION</h2>
+    <p id="homeSubtitle">Empowering Future with Imagination & Technology</p>
+    <div class="home-images">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Robotics_lab.jpg" alt="Robotics" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Futuristic_city_concept.jpg" alt="Futuristic City" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/AI_brain_visualization.jpg" alt="AI Visualization" />
+    </div>
+    <div class="home-subsection">
+      <h3>Popular AI Tools</h3>
+      <ul>
+        <li><a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a></li>
+        <li><a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a></li>
+        <li><a href="https://designs.ai" target="_blank" rel="noopener">Designs.ai</a></li>
+        <li><a href="https://www.canva.com/magic-design/" target="_blank" rel="noopener">Canva Magic Design</a></li>
+        <li><a href="https://readdy.ai" target="_blank" rel="noopener">Readdy.ai Website Builder</a></li>
+        <li><a href="https://elfsight.com/blog/how-to-add-ai-chatbot-to-your-website/" target="_blank" rel="noopener">Elfsight AI Chatbot</a></li>
+        <li><a href="https://semrush.com" target="_blank" rel="noopener">Semrush (AI SEO tool)</a></li>
+      </ul>
+    </div>
+    <div class="home-subsection">
+      <h3>Popular Browsers</h3>
+      <ul>
+        <li><a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+        <li><a href="https://www.apple.com/safari/" target="_blank" rel="noopener">Apple Safari</a></li>
+        <li><a href="https://www.opera.com/" target="_blank" rel="noopener">Opera</a></li>
+      </ul>
+    </div>
+    <div class="home-subsection">
+      <h3>Upload Your Files</h3>
+      <form class="upload-form" onsubmit="handleFileUpload(event)">
+        <label for="videoUpload">Upload Video:</label>
+        <input type="file" id="videoUpload" name="videoUpload" accept="video/*" />
+        
+        <label for="photoUpload">Upload Photo:</label>
+        <input type="file" id="photoUpload" name="photoUpload" accept="image/*" />
+        
+        <label for="docUpload">Upload Document:</label>
+        <input type="file" id="docUpload" name="docUpload" accept=".pdf,.doc,.docx,.txt" />
+        
+        <button type="submit">Upload</button>
+      </form>
+      <p id="uploadStatus"></p>
+    </div>
+  </section>
+
+  <section id="innovation">
+    <h2 id="innovationTitle">Future Innovations</h2>
+    <ul>
+      <li><strong>Anywhere Door:</strong> A portal device allowing instant travel from one location to another.</li>
+      <li><strong>Bamboo Copter:</strong> A small flying rotor that revolutionizes personal transport.</li>
+      <li><strong>AI Smart Environment:</strong> A future city with adaptive technology that adjusts to human needs.</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2 id="aboutTitle">About NEXT INNOVATION</h2>
+    <p id="aboutText">NEXT INNOVATION was founded on the dreams of a 12-year-old student passionate about futuristic technologies. The vision was to create a hub for innovation and creativity, driven by young minds determined to shape a smarter future.</p>
+  </section>
+
+  <section id="helpdesk">
+    <h2 id="helpdeskTitle">Help Desk</h2>
+    <p>If you have inquiries or suggestions, feel free to contact us:</p>
+    <p>Email: nextin.contact@gmail.com</p>
+    <p>Mobile: +91 98765 43210</p>
+  </section>
+
+  <footer>
+    <p>© 2025 NEXT INNOVATION | Empowering Dreams into Reality</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+      hideLanguageSelect();
+    }
+
+    function toggleLanguageSelect() {
+      const langSelect = document.getElementById('language-select');
+      langSelect.style.display = (langSelect.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function hideLanguageSelect() {
+      document.getElementById('language-select').style.display = 'none';
+    }
+
+    function handleFileUpload(event) {
+      event.preventDefault();
+      const videoFile = document.getElementById('videoUpload').files[0];
+      const photoFile = document.getElementById('photoUpload').files[0];
+      const docFile = document.getElementById('docUpload').files[0];
+      let statusMsg = 'Files ready for upload: ';
+      statusMsg += videoFile ? `Video - ${videoFile.name}; ` : '';
+      statusMsg += photoFile ? `Photo - ${photoFile.name}; ` : '';
+      statusMsg += docFile ? `Document - ${docFile.name}; ` : '';
+      if (!videoFile && !photoFile && !docFile) {
+        statusMsg = 'No files selected to upload.';
+      }
+      document.getElementById('uploadStatus').textContent = statusMsg;
+
+      // Actual file upload requires server-side implementation; here, we simply acknowledge
+    }
+
+    const translations = {
+      hi: {
+        title: '[translate:नेक्स्ट इनोवेशन]',
+        subtitle: '[translate:कल्पना और प्रौद्योगिकी के साथ भविष्य को सशक्त बनाना]',
+        btnHome: '[translate:मुख्य पृष्ठ]',
+        btnInnovation: '[translate:नवाचार]',
+        btnAbout: '[translate:हमारे बारे में]',
+        btnHelpdesk: '[translate:सहायता केंद्र]',
+        homeTitle: '[translate:नेक्स्ट इनोवेशन में आपका स्वागत है]',
+        homeSubtitle: '[translate:कल्पना और प्रौद्योगिकी के साथ भविष्य को सशक्त बनाना]',
+        innovationTitle: '[translate:भविष्य के नवाचार]',
+        aboutTitle: '[translate:नेक्स्ट इनोवेशन के बारे में]',
+        aboutText: '[translate:नेक्स्ट इनोवेशन की स्थापना एक 12 वर्षीय छात्र के सपनों पर आधारित है जो भविष्य की प्रौद्योगिकियों के प्रति उत्साहित है। इसका लक्ष्य नवाचार और रचनात्मकता का केंद्र बनना है।]',
+        helpdeskTitle: '[translate:सहायता केंद्र]'
+      },
+      ko: {
+        title: '[translate:넥스트 이노베이션]',
+        subtitle: '[translate:상상력과 기술로 미래를 강화하다]',
+        btnHome: '[translate:홈]',
+        btnInnovation: '[translate:혁신]',
+        btnAbout: '[translate:회사 소개]',
+        btnHelpdesk: '[translate:도움 데스크]',
+        homeTitle: '[translate:넥스트 이노베이션에 오신 것을 환영합니다]',
+        homeSubtitle: '[translate:상상력과 기술로 미래를 강화하다]',
+        innovationTitle: '[translate:미래 혁신]',
+        aboutTitle: '[translate:넥스트 이노베이션 소개]',
+        aboutText: '[translate:넥스트 이노베이션은 12세 학생의 꿈에 기반하여 설립되었습니다. 혁신과 창의성을 이끄는 허브를 목표로 합니다.]',
+        helpdeskTitle: '[translate:도움 데스크]'
+      }
+    };
+
+    function changeLanguage(lang) {
+      if (!translations[lang]) return;
+      document.getElementById('title').innerHTML = translations[lang].title;
+      document.getElementById('subtitle').innerHTML = translations[lang].subtitle;
+      document.getElementById('btnHome').innerHTML = translations[lang].btnHome;
+      document.getElementById('btnInnovation').innerHTML = translations[lang].btnInnovation;
+      document.getElementById('btnAbout').innerHTML = translations[lang].btnAbout;
+      document.getElementById('btnHelpdesk').innerHTML = translations[lang].btnHelpdesk;
+      document.getElementById('homeTitle').innerHTML = translations[lang].homeTitle;
+      document.getElementById('homeSubtitle').innerHTML = translations[lang].homeSubtitle;
+      document.getElementById('innovationTitle').innerHTML = translations[lang].innovationTitle;
+      document.getElementById('aboutTitle').innerHTML = translations[lang].aboutTitle;
+      document.getElementById('aboutText').innerHTML = translations[lang].aboutText;
+      document.getElementById('helpdeskTitle').innerHTML = translations[lang].helpdeskTitle;
+      hideLanguageSelect();
+    }
+  </script>
+</body>
+</html>
